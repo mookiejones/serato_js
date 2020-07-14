@@ -6,7 +6,6 @@
   "author": "Charles Berman <Charles.Berman@magna.com>",
   "license": "MIT",
   "scripts": {
-
     "test": "jest"
   },
   "devDependencies": {

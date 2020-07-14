@@ -1,6 +1,4 @@
 
-import os from 'os';
-import path from 'path'
 import Crate from './Crate'
 import Database from './Database';
 
@@ -8,7 +6,7 @@ import { listCrates, listCratesSync } from './listCrates';
 
 import { getDefaultPath } from './util';
 // Singleton for Serato Folder Path (I doubt it'll change during runtime)
-debugger;
+
 /*
 const FOLDER_PATH = getDefaultPath();
 const CRATES_FOLDER = path.join(FOLDER_PATH, "Subcrates");
@@ -26,6 +24,8 @@ for (let crate of crates) {
     }
 }
 */
+
+
 
 const seratojs = {
     Crate,
