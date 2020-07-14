@@ -1,10 +1,10 @@
-const path = require("path");
-const fs = require("fs");
+import path from 'path';
+import fs from 'fs';
+import seratojs from './index';
 
-const seratojs = require("./index");
-const {
+import {
     sanitizeFilename
-} = require("./util");
+} from "./util";
 
 const TEST_SUBCRATES_FOLDER = path.join(".", "TestSubcrates");
 

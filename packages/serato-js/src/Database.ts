@@ -12,6 +12,12 @@ import { OTRK } from './util/Keys';
 class Database {
     songs: Song[] = [];
     filePath: string;
+
+    static getDatabase = (filePath: string): Database => {
+        const result = new Database(filePath);
+        return result;
+    }
+
     constructor(filePath: string) {
         this.filePath = filePath
     }

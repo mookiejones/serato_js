@@ -1,8 +1,18 @@
-const { app, BrowserWindow } = require('electron');
+const {
+    app,
+    BrowserWindow
+} = require('electron');
 const isDev = require('electron-is-dev');
 const path = require('path');
+const {
+    Database,
+    getDefaultPath
+} = require('serato_js');
 
 let mainWindow;
+debugger;
+
+const filePath = getDefaultPath();
 
 function createWindow() {
     mainWindow = new BrowserWindow({

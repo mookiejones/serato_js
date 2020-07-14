@@ -2,8 +2,12 @@ import React, {
     Component
 } from 'react';
 import DataContext from '../contexts/DataContext';
-
+import { getDefaultPath } from 'serato_js';
 const version = require('../../package.json').version
+
+
+debugger;
+
 class DataProvider extends Component {
     state = {
         version,
@@ -11,6 +15,11 @@ class DataProvider extends Component {
         selectedMenuItem: 'Crates'
     }
 
+
+    componentDidMount() {
+        const path = getDefaultPath(navigator.platform);
+        debugger;
+    }
     handleToggleDrawer = () => {
 
         this.setState(({ openDrawer }) => ({ openDrawer: !openDrawer }))
@@ -32,8 +41,8 @@ class DataProvider extends Component {
             handleMenuSelection: this.handleMenuSelection
         };
 
-        return <DataContext.Provider value={ value } >
-            { children }
+        return <DataContext.Provider value={value} >
+            {children}
         </DataContext.Provider>
     }
 
