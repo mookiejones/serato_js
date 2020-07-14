@@ -1,0 +1,68 @@
+<effects>
+    <effect ID="17825792" name="No Effect"/>
+    <category name="Audio Reactive">
+        <effect ID="17825798" name="Analyzer"/>
+        <effect ID="364254" name="Analyzer Blocks"/>
+        <effect ID="15010388" name="Analyzer Image"/>
+        <effect ID="17825799" name="Analyzer Line"/>
+        <effect ID="16531721" name="Audio CSL"/>
+        <effect ID="3258310" name="Audio Fade"/>
+        <effect ID="25319072" name="Audio Kaleidoscope"/>
+        <effect ID="15219052" name="Audio RGB"/>
+        <effect ID="11865188" name="Audio Split"/>
+        <effect ID="6099702" name="Bass Blur"/>
+        <effect ID="7134182" name="Bass Zoom"/>
+        <effect ID="14039809" name="Flash On BPM"/>
+        <effect ID="16807" name="Isolator Bass"/>
+        <effect ID="6099708" name="Treble Blur"/>
+        <effect ID="7134187" name="Treble Zoom"/>
+    </category>
+    <category name="Equalizer">
+        <effect ID="16531729" name="CSL EQ"/>
+        <effect ID="13449098" name="RGB EQ"/>
+    </category>
+    <category name="Lighting">
+        <effect ID="7497528" name="Anaglyph 3D"/>
+        <effect ID="9417971" name="Blur"/>
+        <effect ID="9324892" name="Brightness"/>
+        <effect ID="11567744" name="Chroma Key Green"/>
+        <effect ID="1608572" name="Color Isolator"/>
+        <effect ID="4159421" name="Color Photocopy"/>
+        <effect ID="15215464" name="Contrast"/>
+        <effect ID="9965417" name="Edge Detect"/>
+        <effect ID="12623200" name="Emboss"/>
+        <effect ID="17825797" name="False Color"/>
+        <effect ID="3749054" name="Filter"/>
+        <effect ID="6526584" name="Gamma"/>
+        <effect ID="1265977" name="LED Billboard"/>
+        <effect ID="12943734" name="Luma Key Black"/>
+        <effect ID="11771433" name="Luma Key White"/>
+        <effect ID="16403779" name="Negative"/>
+        <effect ID="234603" name="Posterize"/>
+        <effect ID="14307489" name="Rotoscope"/>
+        <effect ID="7351908" name="Saturation"/>
+        <effect ID="13766509" name="Sepia"/>
+        <effect ID="8742157" name="Sharpen"/>
+        <effect ID="5190340" name="UV Paint"/>
+    </category>
+    <category name="Record">
+        <effect ID="8141975" name="Record Fade"/>
+        <effect ID="10749124" name="Record Rotate"/>
+    </category>
+    <category name="Transform">
+        <effect ID="17825800" name="Block Columns"/>
+        <effect ID="10749128" name="Center Fade"/>
+        <effect ID="16945677" name="Delay Grid"/>
+        <effect ID="168045677" name="Frame Freeze"/>
+        <effect ID="16555677" name="Frame Pulse"/>
+        <effect ID="73519072" name="Kaleidoscope"/>
+        <effect ID="73519081" name="Mirror"/>
+        <effect ID="17825793" name="Rotate"/>
+        <effect ID="76789081" name="Smudge"/>
+        <effect ID="12037433" name="Split"/>
+        <effect ID="17825795" name="Tile"/>
+        <effect ID="3665600" name="V-Hold"/>
+        <effect ID="17825794" name="Zoom"/>
+        <effect ID="17825796" name="Zoom Tile"/>
+    </category>
+</effects>

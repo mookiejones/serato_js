@@ -31,6 +31,7 @@
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
+    "serato_js": "../serato-js",
     "wait-on": "^5.1.0"
   },
   "devDependencies": {

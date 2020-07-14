@@ -1,0 +1,12 @@
+<list name="favorite_effects">
+    <effect name="Version Echo" mode="multi"/>
+    <effect name="LFO Filter" mode="multi"/>
+    <effect name="Epic Reverb" mode="multi"/>
+    <effect name="Epic Verb Drop" mode="multi"/>
+    <effect name="Bit Crush" mode="multi"/>
+    <effect name="Tremolo" mode="multi"/>
+    <effect name="Brake Echo" mode="multi"/>
+    <effect name="Clean Echo Out" mode="multi"/>
+    <effect name="Echo Out" mode="multi"/>
+    <effect name="Combo FadeEcho" mode="multi"/>
+</list>
