@@ -2,9 +2,13 @@ const path = require("path");
 const fs = require("fs");
 
 const seratojs = require("./index");
-const { sanitizeFilename } = require("./util");
+const {
+    sanitizeFilename
+} = require("./util");
 
 const TEST_SUBCRATES_FOLDER = path.join(".", "TestSubcrates");
+
+
 beforeEach(() => {
     // Create TestSubcrateFolder
     fs.mkdirSync(TEST_SUBCRATES_FOLDER);

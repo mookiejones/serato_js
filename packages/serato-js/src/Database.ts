@@ -7,7 +7,7 @@ import {
     getIndices
 } from './util'
 import Song from './Song';
-import { OTRK } from './Keys';
+import { OTRK } from './util/Keys';
 
 class Database {
     songs: Song[] = [];

@@ -12,7 +12,7 @@ import {
     BITU, BOVC, BCRT, BIRO, BWLB, BWLL,
     BUNS, BBGL
 
-} from './Keys'
+} from './util/Keys'
 
 interface IValue {
     key: string,

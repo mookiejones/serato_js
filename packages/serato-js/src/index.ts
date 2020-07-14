@@ -7,12 +7,13 @@ import Crate from './Crate'
 import Database from './Database';
 
 
-
+import { getDefaultPath } from './util';
 // Singleton for Serato Folder Path (I doubt it'll change during runtime)
 const SERATO_FOLDER = path.join(os.homedir(), "Music", "_Serato_");
 const TEMP_FOLDER = "F:\\music\\_Serato_";
-const CRATES_FOLDER = path.join(TEMP_FOLDER, "SubCrates");
-const DBFILE = path.join(TEMP_FOLDER, "database V2");
+const CRATES_FOLDER = path.join(getDefaultPath(), "SubCrates");
+const DBFILE = path.join(getDefaultPath(), "database V2");
+
 
 function listCratesSync(subcratesFolder = CRATES_FOLDER) {
     const crates = fs.readdirSync(subcratesFolder).map(x => {
@@ -30,6 +31,7 @@ async function listCrates(subcratesFolder: any) {
     });
     return crates;
 }
+console.log(DBFILE);
 
 const database = new Database(DBFILE);
 database.parse();
