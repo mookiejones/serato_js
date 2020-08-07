@@ -52,9 +52,6 @@ test("list crates in sync and read crate info", () => {
 
         for (let crate of crates) {
             const songs = crate.getSongs();
-            for (let song of songs) {
-                console.log(JSON.stringify(song));
-            }
 
             expect(crate.name.length).toBeGreaterThan(0);
 

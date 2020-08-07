@@ -6,8 +6,6 @@ import { getDefaultPath } from 'serato_js';
 const version = require('../../package.json').version
 
 
-debugger;
-
 class DataProvider extends Component {
     state = {
         version,
@@ -41,8 +39,8 @@ class DataProvider extends Component {
             handleMenuSelection: this.handleMenuSelection
         };
 
-        return <DataContext.Provider value={value} >
-            {children}
+        return <DataContext.Provider value={ value } >
+            { children }
         </DataContext.Provider>
     }
 

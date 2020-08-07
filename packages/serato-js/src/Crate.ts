@@ -36,7 +36,7 @@ class Crate extends BaseFile {
             const isLast = index === indices.length - 1;
             const end = isLast ? contents.length : indices[index + 1] - 8; // -8 to remove 'otrk' and size bytes
             const item = contents.slice(start, end);
-            let song = new Song(this.filepath, item);;
+            let song = Song.create(item);
             this.songs.push(song);
         });
         return this.songs;
