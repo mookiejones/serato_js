@@ -3,11 +3,11 @@ import util from 'util';
 import os from 'os';
 import path from 'path';
 import { OTRK } from './util/Keys'
-import { getIndices } from './util';
 import Song from './Song';
 import BaseFile from './BaseFile';
 import {
     parse,
+    getIndices,
     toSeratoString,
     intToHexbin,
     sanitizeFilename
@@ -18,7 +18,7 @@ const CRATES_FOLDER = path.join(SERATO_FOLDER, "SubCrates");
 class Crate extends BaseFile {
     name: string = ""
     filepath: string;
-    songPaths: string[] = [];
+    songPaths?: string[] | null = [];
 
 
     constructor(name: any, subcratesFolder: any = CRATES_FOLDER) {
@@ -75,13 +75,13 @@ class Crate extends BaseFile {
         return this.songPaths;
     }
 
-    addSong(songPath) {
+    addSong(songPath:string) {
         if (this.songPaths === null) {
             this.songPaths = [];
         }
 
         const resolved = path.resolve(songPath);
-        this.songPaths.push(resolved);
+        this.songPaths?.push(resolved);
     }
     _buildSaveBuffer() {
         const header = "vrsn   8 1 . 0 / S e r a t o   S c r a t c h L i v e   C r a t e".replace(

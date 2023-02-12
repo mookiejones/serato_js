@@ -1,84 +1,6 @@
 
 
-
-const TYPE_FIELD = "ttyp";
-const PATH_FIELD = "pfil";
-const SONG_FIELD = "tsng";
-const ARTIST_FIELD = "tart";
-const ALBUM_FIELD = "talb";
-const GENRE_FIELD = "tgen";
-const LENGTH_FIELD = "tlen";
-const SIZE_FIELD = "tsiz";
-const BITRATE_FIELD = "tbit";
-const SAMPLE_RATE_FIELD = "tsmp";
-const BPM_FIELD = "tbpm";
-const COMMENT_FIELD = "tcom";
-const GROUP_FIELD = "tgrp";
-const tlbl = "tlbl";
-const COMPOSER_FIELD = "tcmp";
-const YEAR_FIELD = "ttyr";
-const tadd = "tadd"; //Date Added?
-const KEY_FIELD = "tkey";
-const uadd = "uadd"; //Date Added?
-const utkn = "utkn"; //Token?
-const ulbl = "ulbl"; //Label?
-const utme = "utme"; //Track Time?
-const udsc = "udsc";
-const sbav = "sbav"; //...Audio Volume?
-const bhrt = "bhrt";
-const MISSING_FIELD = "bmis";
-const PLAYED_FIELD = "bply";
-const blop = "blop";
-const bitu = "bitu";
-const bovc = "bovc";
-const bcrt = "bcrt"; //Corrupted?
-const biro = "biro";
-const bwlb = "bwlb"; //White Label?
-const bwll = "bwll";
-const buns = "buns";
-const bbgl = "bbgl";
-const bkrk = "bkrk";
-
-
-const labels = [TYPE_FIELD,
-    PATH_FIELD,
-    SONG_FIELD,
-    ARTIST_FIELD,
-    ALBUM_FIELD,
-    GENRE_FIELD,
-    LENGTH_FIELD,
-    SIZE_FIELD,
-    BITRATE_FIELD,
-    SAMPLE_RATE_FIELD,
-    BPM_FIELD,
-    COMMENT_FIELD,
-    GROUP_FIELD,
-    tlbl,
-    COMPOSER_FIELD,
-    YEAR_FIELD,
-    tadd,
-    KEY_FIELD,
-    uadd,
-    utkn,
-    ulbl,
-    utme,
-    udsc,
-    sbav,
-    bhrt,
-    MISSING_FIELD,
-    PLAYED_FIELD,
-    blop,
-    bitu,
-    bovc,
-    bcrt,
-    biro,
-    bwlb,
-    bwll,
-    buns,
-    bbgl,
-    bkrk];
-
-
+import { labels,Fields } from './util/Keys'
 
 
 class Song {
@@ -172,13 +94,13 @@ class Song {
     /// <summary>
     /// Whether or not the song has been marked as missing
     /// </summary>
-    IsMissing: boolean;
+    IsMissing: boolean=true;
 
 
     /// <summary>
     /// Whether or not the song has been marked as played
     /// </summary>
-    IsPlayed: boolean;
+    IsPlayed: boolean = false;
 
 
 
@@ -270,56 +192,56 @@ class Song {
 
     private static assignStringField(s: Song, f: string, v: string): Song {
         switch (f) {
-            case TYPE_FIELD:
+            case Fields.TYPE_FIELD:
                 s.Type = v;
                 break;
-            case PATH_FIELD:
+            case Fields.PATH_FIELD:
                 s.PathString = v;
                 break;
-            case SONG_FIELD:
+            case Fields.SONG_FIELD:
                 s.Title = v;
                 break;
-            case ARTIST_FIELD:
+            case Fields.ARTIST_FIELD:
                 s.Artist = v;
                 break;
-            case ALBUM_FIELD:
+            case Fields.ALBUM_FIELD:
                 s.Album = v;
                 break;
-            case GENRE_FIELD:
+            case Fields.GENRE_FIELD:
                 s.Genre = v;
                 break;
-            case LENGTH_FIELD:
+            case Fields.LENGTH_FIELD:
                 s.Length = v;
                 break;
-            case SIZE_FIELD:
+            case Fields.SIZE_FIELD:
                 s.Size = v;
                 break;
-            case BITRATE_FIELD:
+            case Fields.BITRATE_FIELD:
                 s.Bitrate = v;
                 break;
-            case SAMPLE_RATE_FIELD:
+            case Fields.SAMPLE_RATE_FIELD:
                 s.SampleRate = v;
                 break;
-            case BPM_FIELD:
+            case Fields.BPM_FIELD:
                 s.Bpm = v;
                 break;
-            case COMMENT_FIELD:
+            case Fields.COMMENT_FIELD:
                 s.Comment = v;
                 break;
-            case GROUP_FIELD:
+            case Fields.GROUP_FIELD:
                 s.Group = v;
                 break;
-            case tlbl:
+            case Fields.LABEL_FIELD:
                 break;
-            case COMPOSER_FIELD:
+            case Fields.COMPOSER_FIELD:
                 s.Composer = v;
                 break;
-            case YEAR_FIELD:
+            case Fields.YEAR_FIELD:
                 s.Year = v;
                 break;
-            case tadd:
+            case Fields.DATE_ADDED_FIELD:
                 break;
-            case KEY_FIELD:
+            case Fields.KEY_FIELD:
                 s.Key = v;
                 break;
         }

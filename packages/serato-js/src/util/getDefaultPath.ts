@@ -15,6 +15,7 @@ const getDefaultPath = (): string => {
         case "linux":
             return path.join(os.homedir(), 'programming', 'serato_js', "_Serato_");
         default:
+            console.log(os.homedir());
             return computer === 'NORCUPCAKE2'
                 ? 'C:\\programming\\serato_js\\_Serato_'
                 : path.join(os.homedir(), "Music", "_Serato_");
