@@ -1,4 +1,5 @@
-import fs from 'fs';
+import * as fs from 'fs';
+
 import {
 
     getIndices
@@ -10,13 +11,11 @@ class Database {
     songs: Song[] = [];
     filePath: string;
 
-    static getDatabase = (filePath: string): Database => {
-        const result = new Database(filePath);
-        return result;
-    }
+    static getDatabase = (filePath: string): Database => new Database(filePath);
 
-    constructor(filePath: string) {
-        this.filePath = filePath
+    private constructor(filePath: string) {
+        this.filePath = filePath;
+        this.parse();
     }
 
     parse() {
@@ -33,7 +32,7 @@ class Database {
             let song = Song.create(item);;
             this.songs.push(song);
         });
-        console.log(`there are ${this.songs.length} songs in ${this.filePath}`);
+//        console.log(`there are ${this.songs.length} songs in ${this.filePath}`);
     }
 }
 

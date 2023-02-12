@@ -11,4 +11,6 @@ const getIndices = (contents: string, search: string) => {
 
 }
 
+
+
 export default getIndices;
