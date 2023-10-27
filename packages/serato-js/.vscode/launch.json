@@ -7,6 +7,14 @@
         {
             "type": "node",
             "request": "launch",
+            "name": "Debug Database",
+            "program": "${workspaceFolder}/src/debug/database.ts",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+        },
+        {
+            "type": "node",
+            "request": "launch",
             "name": "Debug Song",
             "program": "${workspaceFolder}/src/debug/song.ts",
             "preLaunchTask": "tsc: build - tsconfig.json",

@@ -14,6 +14,7 @@ const getDefaultPath = (): string => {
     switch (platform) {
         case "linux":
             return path.join(os.homedir(), 'programming', 'serato_js', "_Serato_");
+
         default:
             console.log(os.homedir());
             return computer === 'NORCUPCAKE2'

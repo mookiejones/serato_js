@@ -1,7 +1,7 @@
 
 import fs from 'fs';
 import path from 'path';
-import Crate from './Crate';
+import Crate from './Crate/Crate';
 import util from 'util';
 
 

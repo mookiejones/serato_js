@@ -2,16 +2,19 @@ import * as fs from 'fs';
 import util from 'util';
 import os from 'os';
 import path from 'path';
-import { OTRK } from './util/Keys'
-import Song from './Song';
+
+// Local Packages
+import { OTRK } from '../Util/Keys'
+import Song from '../Song';
 import BaseFile from './BaseFile';
+
 import {
     parse,
     getIndices,
     toSeratoString,
     intToHexbin,
     sanitizeFilename
-} from './util'
+} from '../Util'
 
 const SERATO_FOLDER = path.join(os.homedir(), "Music", "_Serato_");
 const CRATES_FOLDER = path.join(SERATO_FOLDER, "SubCrates");

@@ -1,12 +1,17 @@
 import {describe, expect, test} from '@jest/globals';
-import { getItems  } from '../src/util';
-const filePath="C:\\Source\\serato_js\\New folder\\_Serato_\\database V2";
+
+import { getItems  } from '../src/Util';
+import {FILE_PATH} from './data';
+
+
+
+
 
 
 describe("Song module",()=>{
     test('Should create songs',()=>{
 
-        const items = getItems(filePath);
+        const items = getItems(FILE_PATH);
         
         const first = items[0];
 

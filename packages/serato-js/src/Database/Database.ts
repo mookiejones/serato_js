@@ -1,13 +1,11 @@
 import * as fs from 'fs';
 
-import {
+import {    getIndices } from '../Util'
+import Song from '../Song';
+import { OTRK } from '../Util/Keys';
+import IDatabase from './IDatabase';
 
-    getIndices
-} from './util'
-import Song from './Song';
-import { OTRK } from './util/Keys';
-
-class Database {
+class Database implements IDatabase {
     songs: Song[] = [];
     filePath: string;
 
@@ -17,7 +15,7 @@ class Database {
         this.filePath = filePath;
         this.parse();
     }
-
+ 
     parse() {
 
 
@@ -35,5 +33,6 @@ class Database {
 //        console.log(`there are ${this.songs.length} songs in ${this.filePath}`);
     }
 }
+
 
 export default Database;

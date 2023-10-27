@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import Song from './Song';
+import Song from './Song/Song';
 
 const DIRECTORY: string = "C:\\programming\\serato_js\\_Serato_";
 
