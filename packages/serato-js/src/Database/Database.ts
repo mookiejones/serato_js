@@ -1,10 +1,16 @@
 import * as fs from 'fs';
-
-import {    getIndices } from '../Util'
+import     getIndices  from '../Util/getIndices'
+import     getGetDirectoryFilename  from '../Util/getGetDirectoryFilename'
 import Song from '../Song';
 import { OTRK } from '../Util/Keys';
 import IDatabase from './IDatabase';
 
+
+ 
+
+/**
+ * @class   Database
+ */
 class Database implements IDatabase {
     songs: Song[] = [];
     filePath: string;
@@ -12,7 +18,7 @@ class Database implements IDatabase {
     static getDatabase = (filePath: string): Database => new Database(filePath);
 
     private constructor(filePath: string) {
-        this.filePath = filePath;
+        this.filePath = getGetDirectoryFilename( filePath);
         this.parse();
     }
  
@@ -23,6 +29,8 @@ class Database implements IDatabase {
         const indices = getIndices(contents, OTRK);
 
         indices.forEach((value: any, index: number) => {
+
+            
             const start = value + 8; // + 9 to skip the 'ptrk' itself and the bytes for size
             const isLast = index === indices.length - 1;
             const end = isLast ? contents.length : indices[index + 1] - 8; // -8 to remove 'otrk' and size bytes

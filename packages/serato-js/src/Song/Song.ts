@@ -1,9 +1,9 @@
-
+import ISong from './ISong';
 
 import { labels,Fields } from '../Util/Keys'
 
 
-class Song {
+class Song implements ISong {
 
 
 

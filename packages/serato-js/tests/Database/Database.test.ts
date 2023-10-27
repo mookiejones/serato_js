@@ -1,6 +1,6 @@
 import {describe, expect, test} from '@jest/globals';
-import Database from '../src/Database';
-import {FILE_PATH} from './data';
+import Database from '../../src/Database';
+import {FILE_PATH} from '../data';
 
 
 
