@@ -8,8 +8,8 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Debug Database",
-            "program": "${workspaceFolder}/src/debug/database.ts",
+            "name": "Sandbox",
+            "program": "${workspaceFolder}/src/debug/sandbox.ts",
             "preLaunchTask": "tsc: build - tsconfig.json",
             "outFiles": ["${workspaceFolder}/dist/**/*.js"]
         },

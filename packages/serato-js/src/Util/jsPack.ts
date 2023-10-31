@@ -80,8 +80,30 @@ class StrucClass {
       return [a.slice(p, p + l)];
     }
   
-    private _EnArray(a: Array<number>, p: number, l: number, v: number[][]): void {
+	/**
+	 * 
+	 * @param a 
+	 * @param p 
+	 * @param l 
+	 * @param v 
+	 * 
+	m._EnArray = function (a, p, l, v)
+	{
+		for (var i = 0; i < l; a[p+i] = v[i]?v[i]:0, i++);
+	};
+	 */
+    private _EnArray(a: number[], p: number, l: number, v: number[]): void {
       for (let i = 0; i < l; a[p + i] = v[i] ? v[i] : 0, i++);
+
+	//   for(let i=0;i<l;i++){
+	// 	var item = a[p+i];
+
+	// 	var result = v[i]?v[i]:0;
+
+	// 	item=result;
+	// 	a[p+i]=v[i]?v[i]:0;
+
+	//   }
     }
    
     private _DeChar(a: number[], p: number): string {
@@ -380,9 +402,14 @@ class StrucClass {
 	};
 	 */
     public Pack(fmt: string, values: any[]): number[] {
+//		let result = this.PackTo(fmt, new Array(this.CalcLength(fmt)), 0, values);
+debugger;
 
-		return this.PackTo(fmt, new Array(this.CalcLength(fmt)), 0, values);
-      return this.PackTo(fmt, new Array(this.CalcLength(fmt)), 0, values) ? a : [];
+console.log(fmt);
+console.log(values);
+		return [1];
+//		return result;
+//      return this.PackTo(fmt, new Array(this.CalcLength(fmt)), 0, values) ? a : [];
     }
   
 
@@ -419,10 +446,6 @@ export function JSPack()
 	// Module-level (private) variables
 	var el,  bBE = false, m = this;
 
-	m._EnArray = function (a, p, l, v)
-	{
-		for (var i = 0; i < l; a[p+i] = v[i]?v[i]:0, i++);
-	};
 
 	// ASCII characters
 	m._DeChar = function (a, p)
