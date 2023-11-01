@@ -1,6 +1,5 @@
 {
     "files.exclude": {
-        "**/*/dist": true,
-        "serato-python":true
+        "dist": true
     }
 }
