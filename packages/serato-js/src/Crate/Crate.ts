@@ -4,18 +4,19 @@ import os from 'os';
 import path from 'path';
 
 // Local Packages
-import { OTRK } from '../Util/Keys'
 import Song from '../Song';
 import BaseFile from './BaseFile';
 
 import {
+    Keys,
     parse,
     getIndices,
     toSeratoString,
     intToHexbin,
     sanitizeFilename
-} from '../Util'
+} from '../util';
 
+const {OTRK} = Keys;
 const SERATO_FOLDER = path.join(os.homedir(), "Music", "_Serato_");
 const CRATES_FOLDER = path.join(SERATO_FOLDER, "SubCrates");
 class Crate extends BaseFile {

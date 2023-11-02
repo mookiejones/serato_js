@@ -1,9 +1,9 @@
 import * as fs from 'fs';
-import     getIndices  from '../Util/getIndices'
-import     getGetDirectoryFilename  from '../Util/getGetDirectoryFilename'
+import {getIndices,getDirectoryFilename,Keys} from '../util';
 import Song from '../Song';
-import { OTRK } from '../Util/Keys';
 import IDatabase from './IDatabase';
+
+const { OTRK } = Keys;
 
 
  
@@ -18,7 +18,7 @@ class Database implements IDatabase {
     static getDatabase = (filePath: string): Database => new Database(filePath);
 
     private constructor(filePath: string) {
-        this.filePath = getGetDirectoryFilename( filePath);
+        this.filePath = getDirectoryFilename( filePath);
         this.parse();
     }
  

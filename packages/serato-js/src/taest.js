@@ -4,7 +4,7 @@ const fs = require('fs');
 
 const Crate = require('./Crate/Crate');
 const { listCratesSync } = require('./listCrates');
-const { getDefaultPath, sanitizeFilename } = require('./Util');
+const { getDefaultPath, sanitizeFilename } = require('./util');
 
 const BASE_FOLDER = path.join(getDefaultPath(), "../")
 const TEST_SUBCRATES_FOLDER = path.join(getDefaultPath(), "../TestSubcrates");

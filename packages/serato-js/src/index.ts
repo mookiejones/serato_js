@@ -5,5 +5,5 @@ export { default as Database } from './Database/Database';
 
 export { listCrates, listCratesSync } from './listCrates';
 
-export { getDefaultPath } from './Util';
+export { getDefaultPath } from './util';
 
