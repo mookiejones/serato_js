@@ -1,10 +1,8 @@
 import {describe, expect, test} from '@jest/globals';
-
-import  getIndices   from '../../src/Util/getIndices';
+import {getIndices,getPathToDatabaseFile,Keys} from '../../src/util'
 import {FILE_PATH} from '../data';
-import getPathToDatabaseFile from '../../src/Util/getPathToDatabaseFile';
 import{readFileSync} from 'fs';
-import Keys from '../../src/Util/Keys';
+
 
 describe('Get Indices for Songs',()=>{
 

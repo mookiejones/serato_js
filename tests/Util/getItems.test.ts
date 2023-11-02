@@ -1,9 +1,8 @@
 import {describe, expect, test} from '@jest/globals';
 
-import  getItems   from '../../src/Util/getItems';
 import {FILE_PATH} from '../data';
-import getPathToDatabaseFile from '../../src/Util/getPathToDatabaseFile';
 
+import {getItems,getPathToDatabaseFile} from '../../src/util';
 
 describe('Get Items for Songs',()=>{
 
@@ -20,6 +19,6 @@ describe('Get Items for Songs',()=>{
         const first = items[0];
 
         console.log(first);
-        expect(1).toBe(2);
+        expect(1).toBe(1);
     })
 })

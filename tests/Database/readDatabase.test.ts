@@ -1,11 +1,11 @@
 import { expect, test} from '@jest/globals';
 import * as fs from 'fs';
-import getGetDirectoryFilename from '../../src/Util/getGetDirectoryFilename'
+import {getDirectoryFilename} from '../../src/util'
 import {FILE_PATH} from '../data';
  
 test("Read file for database",()=>{
 
-    const filePath=getGetDirectoryFilename(FILE_PATH);
+    const filePath=getDirectoryFilename(FILE_PATH);
 
     const stat = fs.lstatSync(filePath);
 

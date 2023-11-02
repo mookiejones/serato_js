@@ -248,4 +248,4 @@ function Struc()
 	};
 };
 
-module.exports = Struc;
+module.exports = new Struc();

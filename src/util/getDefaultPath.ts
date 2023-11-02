@@ -16,7 +16,7 @@ const getDefaultPath = (): string => {
         case "linux":
             return path.join(os.homedir(), 'programming', 'serato_js', "_Serato_");
         case "win32":
-            return 'C:\\programming\\serato_js\\_Serato_';
+            return 'C:\\Users\\admin\\Source\\Repos\\serato_js\\_Serato_';
         default:            
             return path.join(os.homedir(), "Music", "_Serato_");
 

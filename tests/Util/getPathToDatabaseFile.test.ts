@@ -1,7 +1,7 @@
 
 import { describe,expect, test} from '@jest/globals';
 import {existsSync,lstatSync} from 'fs';
-import getPathToDatabaseFile from '../../src/Util/getPathToDatabaseFile';
+import {getPathToDatabaseFile} from '../../src/util';
 
 describe('Get Path to Database File',()=>{
     const databaseFile=getPathToDatabaseFile();

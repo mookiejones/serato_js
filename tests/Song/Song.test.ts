@@ -1,8 +1,7 @@
 import {describe, expect, test} from '@jest/globals';
 
-import  getItems   from '../../src/Util/getItems';
+import  {getItems,getPathToDatabaseFile}   from '../../src/util';
 import {FILE_PATH} from '../data';
-import getPathToDatabaseFile from '../../src/Util/getPathToDatabaseFile';
 
 
 

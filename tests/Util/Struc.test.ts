@@ -1,9 +1,8 @@
 import {describe, expect, test} from '@jest/globals';
 import {readFileSync} from 'fs';
-import Struc   from '../../src/Util/jsPack';
+import Struc   from '../../src/util/jsPack';
 import {FILE_PATH} from '../data';
-import getPathToDatabaseFile from '../../src/Util/getPathToDatabaseFile';
-import{chunk} from '../../src/Util';
+import{chunk,getPathToDatabaseFile} from '../../src/util';
 
 
 
