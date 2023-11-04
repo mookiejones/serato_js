@@ -30,9 +30,12 @@ function Struc()
 	};
 
 	// Little-endian (un)signed N-byte integers
-	m._DeInt = function (a, p)
+	m._DeInt = function (a:Buffer, p:number):number
 	{
-		var lsb = bBE?(el.len-1):0, nsb = bBE?-1:1, stop = lsb+nsb*el.len, rv, i, f;
+		var lsb:number = bBE?(el.len-1):0 ;
+        var nsb = bBE?-1:1;
+        var stop = lsb+nsb*el.len;
+        var  rv:number, i:number, f:number;
 		for (rv = 0, i = lsb, f = 1; i != stop; rv+=(a[p+i]*f), i+=nsb, f*=256);
 		if (el.bSigned && (rv & Math.pow(2, el.len*8-1))) { rv -= Math.pow(2, el.len*8); }
 		return rv;
@@ -45,11 +48,13 @@ function Struc()
 	};
 
 	// ASCII character strings
-	m._DeString = function (a, p, l)
+	m._DeString = function (a:Buffer, p:number, l:number):string
 	{
 		for (var rv = new Array(l), i = 0; i < l; rv[i] = String.fromCharCode(a[p+i]), i++);
-		return rv.join('');
+
+        return rv.join('');
 	};
+
 	m._EnString = function (a, p, l, v)
 	{
 		for (var t, i = 0; i < l; a[p+i] = (t=v.charCodeAt(i))?t:0, i++);
@@ -148,7 +153,7 @@ function Struc()
 				'd': {en:m._En754, de:m._De754, len:8, mLen:52, rt:0}};
 
 	// Unpack a series of n elements of size s from array a at offset p with fxn
-	m._UnpackSeries = function (n, s, a, p)
+	m._UnpackSeries = function (n:number, s:number, a:Buffer, p:number):number[]
 	{
 		for (var fxn = el.de, rv = [], i = 0; i < n; rv.push(fxn(a, p+i*s)), i++);
 		return rv;
@@ -161,13 +166,18 @@ function Struc()
 	};
 
 	// Unpack the octet array a, beginning at offset p, according to the fmt string
-	m.Unpack = function (fmt, a, p)
+	m.Unpack = function (fmt:string, a:Buffer, p?:number|null)
 	{
+
+     
 		// Set the private bBE flag based on the format string - assume big-endianness
 		bBE = (fmt.charAt(0) != '<');
 
 		p = p?p:0;
-		var re = new RegExp(this._sPattern, 'g'), m, n, s, rv = [];
+        let m:RegExpExecArray;
+		var re = new RegExp(this._sPattern, 'g');
+        let  n:number, s:number, rv = [];
+
 		while (m = re.exec(fmt))
 		{
 			n = ((m[1]==undefined)||(m[1]==''))?1:parseInt(m[1]);
@@ -248,4 +258,4 @@ function Struc()
 	};
 };
 
-module.exports = new Struc();
+export default new Struc();

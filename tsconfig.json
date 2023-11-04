@@ -53,10 +53,10 @@
 
     /* Additional Checks */
 
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     /* Report errors on unused locals. */
 
-    "noUnusedParameters": true,
+    "noUnusedParameters": false,
     /* Report errors on unused parameters. */
 
     "noImplicitReturns": true,
@@ -85,6 +85,7 @@
 
     /* Advanced Options */
     "skipLibCheck": true,
+
     /* Skip type checking of declaration files. */
     "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
 

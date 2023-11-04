@@ -8,6 +8,7 @@ export {default as getDefaultPath} from "./getDefaultPath";
 export {default as Keys} from "./Keys";
 export {default as getPathToDatabaseFile} from "./getPathToDatabaseFile";
 export { default as chunk} from './chunk';
-export { default as struc} from './struc';
+export { default as struc} from "./struc"
 export { default as getDirectoryFilename} from './getGetDirectoryFilename';
 export { default as enumerate} from './enumerate';
+export { default as unpack} from './unpack';
